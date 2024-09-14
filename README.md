@@ -11,7 +11,7 @@ Blog: <a href="https://www.freecodecamp.org/news/how-to-build-react-based-code-e
 
 ## Installations and setup
 
-- git clone `https://github.com/manuarora700/react-code-editor.git`
+- git clone `https://github.com/yadavrajneesh481/code_editor_react.git`
 - `npm install`
 - A sample `.env.sample` file is given, Register on <a href="https://rapidapi.com/judge0-official/api/judge0-ce/pricing" target="__blank">RapidAPI</a> and get your API keys.
 - Create a `.env` file.
@@ -28,6 +28,5 @@ TODO:
 4. Save code functionality (Firestore - use Slug based approach)
 5. Share code functionality
 
-## Support
 
-<a href="https://www.buymeacoffee.com/manuarora" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+

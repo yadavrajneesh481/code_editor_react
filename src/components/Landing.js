@@ -110,21 +110,11 @@ const Landing = () => {
       })
       .catch((err) => {
         let error = err.response ? err.response.data : err;
-        // get error status
-        let status = err.response.status;
-        console.log("status", status);
-        if (status === 429) {
-          console.log("too many requests", status);
-
-          showErrorToast(
-            `Quota of 100 requests exceeded for the Day! Please read the blog on freeCodeCamp to learn how to setup your own RAPID API Judge0!`,
-            10000
-          );
-        }
         setProcessing(false);
-        console.log("catch block...", error);
+        console.log(error);
       });
   };
+
 
   const checkStatus = async (token) => {
     const options = {
@@ -144,15 +134,15 @@ const Landing = () => {
       if (statusId === 1 || statusId === 2) {
         // still processing
         setTimeout(() => {
-          checkStatus(token);
-        }, 2000);
-        return;
+          checkStatus(token)
+        }, 2000)
+        return
       } else {
-        setProcessing(false);
-        setOutputDetails(response.data);
-        showSuccessToast(`Compiled Successfully!`);
-        console.log("response.data", response.data);
-        return;
+        setProcessing(false)
+        setOutputDetails(response.data)
+        showSuccessToast(`Compiled Successfully!`)
+        console.log('response.data', response.data)
+        return
       }
     } catch (err) {
       console.log("err", err);
@@ -215,7 +205,7 @@ const Landing = () => {
       />
 
       <a
-        href="https://github.com/manuarora700/react-code-editor"
+        href="https://github.com/yadavrajneesh481/code_editor_react"
         title="Fork me on GitHub"
         class="github-corner"
         target="_blank"
